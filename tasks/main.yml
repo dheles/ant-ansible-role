@@ -9,7 +9,7 @@
 
 - name: test java version
   fail:
-    msg: "this installation of ant requires java version {{ play_minimum_java_version }} or higher"
+    msg: "this installation of ant requires java version {{ ant_minimum_java_version }} or higher"
   when: "not returned_java_version | version_compare(ant_minimum_java_version, '>=')"
 
 - name: get ant checksum
