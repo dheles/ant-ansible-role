@@ -67,4 +67,4 @@
 - name: test ant version
   fail:
     msg: "attempted to install ant {{ ant_version }}, but something went wrong"
-  when: "not returned_ant_version | version_compare(ant_version, '>=')"
+  when: "not returned_ant_version | version_compare(ant_version, '==')"
